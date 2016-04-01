@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity implements ProgressListener
             @Override
             public void onClick(View v)
             {
-                Toast.makeText(MainActivity.this, "aaa", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "开始下载", Toast.LENGTH_SHORT).show();
                 HttpUtils.createService(MainActivity.this).downloadAPK("http://f5.market.xiaomi.com/download/AppStore/01a3bd5737f2e4fcc0c1939b4798b259b3c31247e/com.supercell.clashroyale.mi.apk").enqueue(new Callback<ResponseBody>()
                 {
                     @Override
@@ -79,7 +79,8 @@ public class MainActivity extends AppCompatActivity implements ProgressListener
                                 }
 
                             }
-                            Log.d("aaaaaaaaaaa", "isSuccessful");
+                            Toast.makeText(MainActivity.this, "下载成功", Toast.LENGTH_SHORT).show();
+                            Log.d("下载成功", "isSuccessful");
                         } else
                         {
 
@@ -92,7 +93,7 @@ public class MainActivity extends AppCompatActivity implements ProgressListener
                     public void onFailure(Call<ResponseBody> call, Throwable t)
                     {
                         Toast.makeText(MainActivity.this, "onFailure" + t.getMessage(), Toast.LENGTH_SHORT).show();
-                        Log.d("aaaaaaaaaaa", t.getMessage());
+                        Log.d("下载失败", t.getMessage());
                         progressBar.setProgress(14);
                     }
                 });
