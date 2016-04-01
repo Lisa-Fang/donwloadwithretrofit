@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity implements ProgressListener
             public void onClick(View v)
             {
                 Toast.makeText(MainActivity.this, "aaa", Toast.LENGTH_SHORT).show();
-                HttpUtils.createService(MainActivity.this).downloadAPK("https://dl.wandoujia.com/files/jupiter/latest/wandoujia-wandoujia_web.apk").enqueue(new Callback<ResponseBody>()
+                HttpUtils.createService(MainActivity.this).downloadAPK("http://f5.market.xiaomi.com/download/AppStore/01a3bd5737f2e4fcc0c1939b4798b259b3c31247e/com.supercell.clashroyale.mi.apk").enqueue(new Callback<ResponseBody>()
                 {
                     @Override
                     public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response)
