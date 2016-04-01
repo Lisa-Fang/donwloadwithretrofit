@@ -94,7 +94,6 @@ public class MainActivity extends AppCompatActivity implements ProgressListener
                     {
                         Toast.makeText(MainActivity.this, "onFailure" + t.getMessage(), Toast.LENGTH_SHORT).show();
                         Log.d("下载失败", t.getMessage());
-                        progressBar.setProgress(14);
                     }
                 });
             }
